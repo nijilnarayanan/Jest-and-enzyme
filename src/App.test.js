@@ -1,9 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import App from './App';
+import {shallow} from 'enzyme';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+describe('Card Number', () => {
+  const component = shallow(<App />)
+  it('should render without crashing',() => {
+ expect(component.find('div').exists()).toBe(true)
+  })
+
+  it('renders cardnumber input',() =>{
+expect(component.find('input').length).toEqual(1)
+  })
+})
