@@ -19,6 +19,7 @@ class App extends Component {
   render() {
     return (
       <div className="cardnumber">
+      <label>Enter Card Number : </label>
         <input type='text' className='cardnumber' onChange={this.onInputChange} maxLength="16"/>
        </div> 
     );
